@@ -56,7 +56,7 @@ const Navbar = () => {
               </li>
             ))}
             <li className="nav-item">
-              <a className="btn btn-outline-primary ms-lg-3" href="/New_Resume.pdf" download>
+              <a className="btn btn-outline-primary ms-lg-3" href="/Portfolio/New_Resume.pdf" download>
                 Resume
               </a>
             </li>

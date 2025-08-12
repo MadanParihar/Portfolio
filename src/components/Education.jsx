@@ -6,19 +6,19 @@ const Education = () => {
       degree: "Master of Computer Application",
       university: "Veer Narmad South Gujarat University",
       years: "2024 – 2026",
-      logo: "/vnsgu.png"
+      logo: "/Portfolio/vnsgu.png"
     },
     {
       degree: "Bachelor of Computer Application",
       university: "Veer Narmad South Gujarat University",
       years: "2021 – 2024",
-      logo: "/vnsgu.png"
+      logo: "/Portfolio/vnsgu.png"
     },
     {
       degree: "HSC",
       university: "Gujarat State Higher Secondary Education Board",
       years: "2020 – 2021",
-      logo: "/ghseb.png"
+      logo: "/Portfolio/ghseb.png"
     }
   ];
 
