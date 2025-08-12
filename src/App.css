@@ -1,0 +1,285 @@
+:root {
+  --primary-color: #0d6efd;
+  --background-dark: #0d1117;
+  --card-dark: #161b22;
+  --text-light: #f0f6fc;
+  --text-muted: #c9d1d9; /* slightly dimmer than white, still readable */
+  --border-color: #30363d;
+}
+
+/* Global */
+body {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  padding-top: 70px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-light);
+  font-weight: 700;
+}
+
+p, li {
+  color: var(--text-muted);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Force any Bootstrap muted text to be brighter */
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(13, 17, 23, 0.85) !important;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar .nav-link {
+  color: var(--text-muted) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+.navbar .btn-outline-primary {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.navbar .btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+/* Hero Section */
+#hero {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+  box-shadow: 0 0 20px rgba(13, 110, 253, 0.4);
+}
+
+.hero-badges .badge {
+  background-color: var(--card-dark);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  margin: 0 0.3rem;
+}
+
+/* Project Cards */
+.project-card {
+  background-color: var(--card-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--primary-color);
+}
+
+.project-card h4 {
+  color: var(--text-light);
+}
+
+.project-card p {
+  color: var(--text-muted);
+}
+
+.project-card ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.project-card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.project-card .badge {
+  background-color: #21262d;
+  color: var(--text-light);
+}
+
+/* Skills */
+.skill-badge {
+  background-color: var(--card-dark);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+  border-color: var(--primary-color);
+  color: var(--text-light);
+  transform: translateY(-5px);
+}
+
+.skill-badge i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Education Timeline */
+.timeline {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 auto;
+  border-left: 2px solid var(--border-color);
+  display: inline-block;
+  text-align: left;
+}
+
+.timeline li {
+  margin-bottom: 2rem;
+  padding-left: 30px;
+  position: relative;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 5px;
+  width: 22px;
+  height: 22px;
+  background-color: var(--primary-color);
+  border: 4px solid var(--background-dark);
+  border-radius: 50%;
+}
+
+.timeline .badge {
+  background-color: #21262d;
+  border: 1px solid var(--border-color);
+  color: var(--text-light);
+}
+
+.timeline li p {
+  color: var(--text-muted) !important;
+}
+
+.edu-logo {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: white;
+  padding: 3px;
+}
+
+/* Certifications */
+.cert-card {
+  background-color: var(--card-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+}
+
+.cert-card h5 {
+  color: var(--text-light);
+}
+
+.cert-card .badge {
+  background-color: #21262d;
+  border: 1px solid var(--border-color);
+  color: var(--text-light);
+}
+
+/* Contact Section */
+#contact a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.contact-card {
+  background-color: var(--card-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  color: var(--text-light);
+}
+
+.contact-card p,
+.contact-card a {
+  color: var(--text-muted);
+}
+
+.contact-card a:hover {
+  color: var(--primary-color);
+}
+
+.social-link {
+  font-size: 2rem;
+  color: var(--text-muted);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+  background-color: var(--background-dark);
+  padding: 20px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+footer p {
+  margin: 0;
+  color: var(--text-light) !important; /* ensure always bright */
+}
+
+footer p strong {
+  font-weight: 600;
+  color: #ffffff !important;
+}
+
+/* Section spacing */
+section {
+  padding: 100px 0;
+}
